@@ -4,6 +4,7 @@ open class Duck {
     fun quack() {}
     fun swim() {}
     open fun display() {}
+    fun fly() {}
 }
 
 class MallardDuck : Duck() {
