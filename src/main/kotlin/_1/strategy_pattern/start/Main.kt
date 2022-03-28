@@ -1,8 +1,7 @@
 package _1.strategy_pattern.start
 
-class Main {
-    fun main() {
-        val rubberDuck = RubberDuck()
-        rubberDuck.fly() // what?!
-    }
+fun main(args: Array<String>) {
+    val mallard = MallardDuck()
+    mallard.performQuack()
+    mallard.performFly()
 }
