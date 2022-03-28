@@ -14,3 +14,7 @@ class MallardDuck : Duck() {
 class RedHeadDuck : Duck() {
     override fun display() {}
 }
+
+class RubberDuck : Duck() {
+    override fun display() {}
+}
