@@ -15,3 +15,9 @@ class FlyNoWay : FlyBehavior {
         println("Не умею летать(((")
     }
 }
+
+class FlyRocketPowered : FlyBehavior {
+    override fun fly() {
+        println("SPAAAAACE!")
+    }
+}

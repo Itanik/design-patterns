@@ -1,17 +1,9 @@
 package _1.strategy_pattern.start
 
 abstract class Duck {
-    abstract val quackBehavior: QuackBehavior
-    abstract val flyBehavior: FlyBehavior
+    abstract var quackBehavior: QuackBehavior
+    abstract var flyBehavior: FlyBehavior
     abstract fun display()
-    fun swim() {
-        println("Все утки плавают, даже утки-приманки")
-    }
-}
-
-class MallardDuck : Duck() {
-    override val quackBehavior = Quack()
-    override val flyBehavior = FlyWithWings()
 
     fun performQuack() {
         quackBehavior.quack()
@@ -19,23 +11,44 @@ class MallardDuck : Duck() {
     fun performFly() {
         flyBehavior.fly()
     }
+
+    fun swim() {
+        println("Все утки плавают, даже утки-приманки")
+    }
+}
+
+class MallardDuck : Duck() {
+    override var quackBehavior: QuackBehavior = Quack()
+    override var flyBehavior: FlyBehavior = FlyWithWings()
+
     override fun display() {
         println("Я дикая утка!")
     }
 }
 
 class RedHeadDuck : Duck() {
-    override val quackBehavior = Quack()
-    override val flyBehavior = FlyWithWings()
+    override var quackBehavior: QuackBehavior = Quack()
+    override var flyBehavior: FlyBehavior = FlyWithWings()
+
     override fun display() {
         println("Я красноголоваая утка!")
     }
 }
 
 class RubberDuck : Duck() {
-    override val quackBehavior = Squeak()
-    override val flyBehavior = FlyNoWay()
+    override var quackBehavior: QuackBehavior = Squeak()
+    override var flyBehavior: FlyBehavior = FlyNoWay()
+
     override fun display() {
         println("Я утка Навального!")
+    }
+}
+
+class ModelDuck : Duck() {
+    override var quackBehavior: QuackBehavior = Quack()
+    override var flyBehavior: FlyBehavior = FlyNoWay()
+
+    override fun display() {
+        println("Я утка-приманка!")
     }
 }
