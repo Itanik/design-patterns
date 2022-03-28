@@ -1,5 +1,8 @@
 package _2_Observer
 
+import _2_Observer.common.Observable
+import _2_Observer.common.Observer
+
 class WeatherData : Observable<Weather> {
     private val observers = mutableListOf<Observer<Weather>>()
 

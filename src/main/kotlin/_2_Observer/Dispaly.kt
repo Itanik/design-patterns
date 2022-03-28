@@ -1,5 +1,7 @@
 package _2_Observer
 
+import _2_Observer.common.Observer
+
 interface Display {
     fun displayData(weather: Weather)
 }
