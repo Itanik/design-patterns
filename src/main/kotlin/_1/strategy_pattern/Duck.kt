@@ -1,4 +1,4 @@
-package _1.strategy_pattern.start
+package _1.strategy_pattern
 
 abstract class Duck {
     abstract var quackBehavior: QuackBehavior
