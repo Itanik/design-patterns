@@ -1,4 +1,4 @@
-package _1.strategy_pattern
+package _1_Strategy
 
 interface QuackBehavior {
     fun quack()
